@@ -21,7 +21,6 @@ public class BookingController {
 
 	@RequestMapping(value = "/{email:.+}", method = RequestMethod.GET)
 	public ResponseEntity findUserBookings(@PathVariable(name = "email", value = "email") String email) {
-		System.out.println("test");
 		List bookings = bookingService.findUserBookings(email);
 		return new ResponseEntity(bookings, HttpStatus.OK);
 	}

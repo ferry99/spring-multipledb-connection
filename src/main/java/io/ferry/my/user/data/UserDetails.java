@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table
+@Table(name = "user_details")
 public class UserDetails {
 
 	@Id
@@ -16,9 +16,9 @@ public class UserDetails {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	@Column
+	@Column(name = "first_name")
 	private String firstName;
-	@Column
+	@Column(name = "last_name")
 	private String lastName;
 	@Column
 	private String email;
