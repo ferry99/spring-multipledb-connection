@@ -18,7 +18,7 @@ public class BookingService {
 	private BookingDao bookingDao;
 
 	public List findUserBookings(String emailId) {
-		UserDetails userdetails = userDao.findByEmail(emailId);
+//		UserDetails userdetails = userDao.findByEmail(emailId);
 		List bookings = bookingDao.findByCreatedBy(1L);
 		return bookings;
 	}
